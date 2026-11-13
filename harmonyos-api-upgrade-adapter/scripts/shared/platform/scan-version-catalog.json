@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "source": {
+    "ideVersion": "26.0.0.821",
+    "resourceDirectory": "plugins/harmony/arkanalyzer-apiscan/resources/apiChange",
+    "resourceArchive": "plugins/harmony/lib/project-api-change-assistant-26.0.0.821.jar",
+    "directoryVersionNamesSha256": "63a3aa73b3c0f3d78867b150b0265aea518127c93c7dd3aaef2abb9b0d3e4847",
+    "archiveVersionNamesSha256": "63a3aa73b3c0f3d78867b150b0265aea518127c93c7dd3aaef2abb9b0d3e4847"
+  },
+  "versions": [
+    "26.0.0(26) Beta1",
+    "26.0.0(26) Beta2",
+    "26.0.0(26) Release",
+    "5.0.1(13) Beta3",
+    "5.0.1(13) Release",
+    "5.0.2(14) Beta1",
+    "5.0.2(14) Release",
+    "5.0.3(15) Beta1",
+    "5.0.3(15) Beta2",
+    "5.0.3(15) Release",
+    "5.0.4(16) Release",
+    "5.0.5(17) Beta1",
+    "5.0.5(17) Release",
+    "5.1.0(18) Release",
+    "5.1.1(19) Beta1",
+    "5.1.1(19) Release",
+    "6.0.0(20) Beta1",
+    "6.0.0(20) Beta2",
+    "6.0.0(20) Beta3",
+    "6.0.0(20) Beta5",
+    "6.0.0(20) Release",
+    "6.0.1(21) Beta1",
+    "6.0.1(21) Release",
+    "6.0.2(22) Beta1",
+    "6.0.2(22) Release",
+    "6.1.0(23) Beta1",
+    "6.1.0(23) Beta2",
+    "6.1.0(23) Release",
+    "6.1.1(24) Beta1",
+    "6.1.1(24) Release"
+  ],
+  "versionsSha256": "aba4bd23484de909da0e852bd3165de3b39dd5470eabb5e9710c4f20d1876df5"
+}

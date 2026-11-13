@@ -1,0 +1,883 @@
+{
+  "schemaVersion": 1,
+  "documents": [
+    {
+      "path": "26.0.0/beta1-ux-style-and-effect-changes.md",
+      "sha256": "03bf6d527f3a14e74ded8ae985472688ce23befa5c8fc743b3bacb4ce9f9e713"
+    },
+    {
+      "path": "26.0.0/beta1-changes-for-all-apps.md",
+      "sha256": "b76e919fc9b0bbd179e7aac17c19b6640fdc98c49dd3edf0f3f5942b2a3b9b3e"
+    },
+    {
+      "path": "26.0.0/beta2-changes-for-all-apps.md",
+      "sha256": "b951d1c9bf2fa58aa0d813348f6eda9cd54bb2576f32f5cbe3b722d8a6e8df26"
+    },
+    {
+      "path": "26.0.0/release-changes-for-all-apps.md",
+      "sha256": "ae3cbd11ac8e20d87d4f83608e03bb3c845d8d16bcb3149e2c4a7b7b2da88508"
+    },
+    {
+      "path": "5.0.1(13)/beta3-os-api-behavior-changes.md",
+      "sha256": "2b911f1d08ba6a0025eb22f363d42894d9781aef5548ba5ea70498fcf28bcffe"
+    },
+    {
+      "path": "5.0.1(13)/beta3-ux-style-and-effect-changes.md",
+      "sha256": "201245b3528d8d0d834798c67e9a84e032b0d104fee1ecd6ec0e00cf907595ae"
+    },
+    {
+      "path": "5.0.1(13)/release-os-api-behavior-changes.md",
+      "sha256": "9c83811728fd8ab335e52cd084b7e19256cf65560be675b6783332d85ccddf8f"
+    },
+    {
+      "path": "5.0.1(13)/release-ux-style-and-effect-changes.md",
+      "sha256": "4f553dc520e1a7e83365dc9c34e0259a9d6928209563816e80d5547346c2493f"
+    },
+    {
+      "path": "5.0.2(14)/os-api-behavior-changes.md",
+      "sha256": "3ce040e5f0b7a64e0bfd119ab7af47886fba207b3b944e7bc89fae14a6e7c97d"
+    },
+    {
+      "path": "5.0.2(14)/ux-style-and-effect-changes.md",
+      "sha256": "673ca372a3d58f0ea369acf3ed73a3c8ae578b974d674ac49548202c58af4182"
+    },
+    {
+      "path": "5.0.3(15)/beta1-os-api-behavior-changes.md",
+      "sha256": "6178ff6f2ef6280bc453cef19586c97b881ef9aa7ef487b3431c867ed5c306b9"
+    },
+    {
+      "path": "5.0.3(15)/beta1-ux-style-and-effect-changes.md",
+      "sha256": "d255d4867234437e0bcf66c9a3c035ef2860c0bdc39896891487792c21959f38"
+    },
+    {
+      "path": "5.0.3(15)/beta2-os-api-behavior-changes.md",
+      "sha256": "2a6e91447319f5e0e15cda7f5fb341e6a876267677e4cca7947187a50fa7462f"
+    },
+    {
+      "path": "5.0.3(15)/beta2-ux-style-and-effect-changes.md",
+      "sha256": "99eed03df4b6f0a59409d9d3c692f8d7e607aaec29b3e2e8342c69da5e9d9bac"
+    },
+    {
+      "path": "5.0.3(15)/release-os-api-behavior-changes.md",
+      "sha256": "defa60bbe1161d9ab37b77680646deb06a7e43210cd5097e62131554067713cc"
+    },
+    {
+      "path": "5.1.0(18)/os-api-behavior-changes.md",
+      "sha256": "dc82c2a55e78ddda00a8e8a647d81bc55bdc9bd1ad74433321dbfd0f7d19e586"
+    },
+    {
+      "path": "5.1.0(18)/ux-style-and-effect-changes.md",
+      "sha256": "b5efd1c30758f21d9539f8cc98a1681305b2739e10a16599b4fd8548ae1bbd3d"
+    },
+    {
+      "path": "6.0.0(20)/beta1-os-api-behavior-changes.md",
+      "sha256": "5fb5809842231b3251d95a1ac8bab7ce817d396c2e7ba04c448ea39d0f82b886"
+    },
+    {
+      "path": "6.0.0(20)/beta1-ux-style-and-effect-changes.md",
+      "sha256": "6af24f0af75d370300cda947c6fe56ba463d965f7706927d1c36e57a1e392303"
+    },
+    {
+      "path": "6.0.0(20)/beta2-os-api-behavior-changes.md",
+      "sha256": "a90ad570d5441c5da0f27046bb62b01b264d781659665be413c12b097724a0d0"
+    },
+    {
+      "path": "6.0.0(20)/beta2-ux-style-and-effect-changes.md",
+      "sha256": "c0ceec1292d277542e541703797a613e1c8e22ce5188e6ada96935fc21c791b9"
+    },
+    {
+      "path": "6.0.0(20)/beta3-os-api-behavior-changes.md",
+      "sha256": "741b11643669267bd2c3ddc44c2e36d48e16e953c40d3287ac3dbe474831de5e"
+    },
+    {
+      "path": "6.0.0(20)/beta5-os-api-behavior-changes.md",
+      "sha256": "7349bcf453858fe8ac1d3a48184df08a8ff4d05a84516a1500d5d61244afe89e"
+    },
+    {
+      "path": "6.1.0(23)/changes-for-all-apps.md",
+      "sha256": "6fcef27bc5cf228227897cef7a9bec354ba89f190ecf391a293767dc28f1f5ac"
+    }
+  ],
+  "overview": [
+    {
+      "version": "26.0.0",
+      "row": "| Ability Kit | [部分公共事件行为变更，增加管控](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026020567372) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [新增默认浏览器权限](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7003#ch2026071666391) | 26.0.0 Release | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| Agent Framework Kit | [OnDataCallback接口变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7003#ch2026072498744) | 26.0.0 Release | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| ArkTS | [JSVM基于上游社区的Chromium/v8内核从132升级为144版本](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026031811135) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [async函数类型判定修复](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026030208973) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [JSVM支持Wasm解释器，jitless默认行为发生变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026031127532) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [修复ConvertXML的fastConvertToJSObject接口解析时丢失同级text节点的问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026030646632) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| ArkUI | [NodeAdapter的onAttachToNode回调触发时机变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026010926267) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [鼠标事件rawDeltaX和rawDeltaY的返回值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2025112446948) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [属性字符串段落首个占位为CustomSpan或ImageAttachment时，支持设置段落样式](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026031362881) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [LayoutPolicy.matchParent父组件为Row、Column、Flex组件时，单方向设置matchParent的子组件布局行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026031815681) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [EmbeddedComponent获焦能力变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026031800777) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [WithTheme相关组件行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026031417380) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [ArkUI接口新增仅支持Stage模型的约束](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026010615012) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [主页NavDestination中使用queryNavDestinationInfo接口和onResult接口的行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026033084250) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [NODE_SWIPER_EVENT_ON_CONTENT_DID_SCROLL事件回调的返回值行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026042449863) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [@ReusableV2组件复用的reuse属性支持动态复用标识](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026010512168) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [组件的阴影模糊半径规格变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026022422576) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [List组件onScrollVisibleContentChange事件行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7002#ch2026032364747) | 26.0.0 Beta2 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [Image组件autoResize属性默认行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7003#ch2026082810311) | 26.0.0 Release | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [沉浸光感新增生效约束](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7003#section126372211) | 26.0.0 Release | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| ArkWeb | [ArkWeb基于上游社区的Chromium内核从132升级为144版本](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026032368425) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [Cookie存储目录变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7002#ch2026051550855) | 26.0.0 Beta2 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| Core File Kit | [沙箱路径/storage/Users/currentUser/appdata下无权限目录的stat和access行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7003#ch2026072798462) | 26.0.0 Release | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| Localization Kit | [国际化-I18n模块部分新增接口错误码的类型从string变更为number](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7003#ch2026080646373) | 26.0.0 Release | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| MDM Kit | [企业设备管理服务部分接口错误码的类型从string变更为number](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7003#ch2026081113549) | 26.0.0 Release | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| Media Library Kit | [ohos.permission.READ_IMAGEVIDEO权限变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026042864213) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| Network Kit | [getUidRxBytes、getUidTxBytes接口权限变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026032458158) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| 权限管控 | [权限策略变更说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-7001#ch2026031760265) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [notofonts三方件小语种字体升级变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-7001#ch2026022857472) | 26.0.0 Beta1 | 全部生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [表单类组件触摸热区最小高度变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-7001#ch2026031846233) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [内置文本的组件文本样式优化](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-7001#ch2026032801249) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [Dialog、Toast、AlphabetIndexer和文本选择菜单默认开启沉浸式系统材质](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-7001#ch2026032761266) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "26.0.0",
+      "row": "| [半模态居中弹窗最大高度变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-7001#ch2026031731268) | 26.0.0 Beta1 | targetSdkVersion ≥ 26.0.0变更生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| Ability Kit | [禁止Extension进程拉起启动框架](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#禁止extension进程拉起启动框架) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkTS | [convertXml模块未支持parentKey属性的行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#convertxml模块未支持parentkey属性的行为变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.1(13)变更生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [在字节码HAR中通过router.getState()获取的path内容变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#在字节码har中通过routergetstate获取的path内容变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [禁止在转场动画过程中，更新消失节点的属性](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#禁止在转场动画过程中更新消失节点的属性) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.1(13)变更生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [优化getWindowProperties，增加返回值中drawableRect的实时性，调用行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#优化getwindowproperties增加返回值中drawablerect的实时性调用行为变更) | 5.0.1(13) Beta3 | tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [RichEditor（富文本）从组件外拖入内容onWillChange、onDidChange回调变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#richeditor富文本从组件外拖入内容onwillchangeondidchange回调变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [RichEditor（富文本）onWillChange接口返回值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#richeditor富文本onwillchange接口返回值变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [RichEditor（富文本）TypingStyle默认字体大小变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#richeditor富文本typingstyle默认字体大小变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [RichEditor（富文本）onDidChange接口变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#richeditor富文本ondidchange接口变更)* 该变更在11月19日更新的ROM版本引入，ROM版本号为5.0.0.107。 | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [RichEditor（富文本）删除完成后光标位置变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#richeditor富文本删除完成后光标位置变更)* 该变更在11月19日更新的ROM版本引入，ROM版本号为5.0.0.107。 | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| Localization Kit | [国家、地区本地化名称变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#国家地区本地化名称变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| Localization Kit | [时间日期格式“十一月”格式化结果错误问题修改](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#时间日期格式十一月格式化结果错误问题修改)* 该变更在11月19日更新的ROM版本引入，ROM版本号为5.0.0.107。 | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| Localization Kit | [日期时间段格式化在zh-Hant-HK下结果错误问题修改](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#日期时间段格式化在zh-hans-hk下结果错误问题修改) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| Localization Kit | [归属地获取接口对无效号码的归属计算错误问题修改](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#归属地获取接口对无效号码的归属计算错误问题修改) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| Localization Kit | [系统支持国家地区列表变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#系统支持国家地区列表变更)* 该变更在11月19日更新的ROM版本引入，ROM版本号为5.0.0.107。 | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [鼠标按键处理行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#鼠标按键处理行为变更) | 5.0.1(13) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.1(13)变更生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [动画接口在播放次数为无限循环时的行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#动画接口在播放次数为无限循环时的行为变更) | 5.0.1(13) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [系统对单应用最大创建UIAbility数量限制变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#系统对单应用最大创建uiability数量限制变更) | 5.0.1(13) Release | phone, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkUI | [Video组件不再默认解析并自动播放拖拽信息中的视频资源](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#video组件不再默认解析并自动播放拖拽信息中的视频资源)* 该变更在2025年1月8日更新的ROM版本引入，ROM版本号为5.0.0.123。 | 5.0.1(13) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| ArkWeb | [onErrorReceive接口在首次加载woff等在线字体资源不再触发的行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#onerrorreceive接口在首次加载woff等在线字体资源不再触发的行为变更) | 5.0.1(13) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| Form Kit | [PostCardAction的router事件允许拉起Ability类型范围变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#postcardaction的router事件允许拉起ability类型范围变更)* 该变更在2025年1月8日更新的ROM版本引入，ROM版本号为5.0.0.123。 | 5.0.1(13) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| 公共能力 | [app.json中bundleName字段正则匹配规则修改](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#appjson中bundlename字段正则匹配规则修改)* 该变更在2024年12月8日发布的patch版本引入，对应开发工具DevEco Studio版本为5.0.5.306。 | 5.0.1(13) Release | phone, tablet, 2in1 | 使用DevEco Studio 5.0.1 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [QRCode深浅色适配修改](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b106#qrcode深浅色适配修改) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [属性动画onFinish结束回调在UIAbility退后台时因有限循环动画被终止而提前触发](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b106#属性动画onfinish结束回调在uiability退后台时因有限循环动画被终止而提前触发) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [TextInput组件在非标准字体场景下showCounter接口布局变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b106#textinput组件在非标准字体场景下showcounter接口布局变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [MenuItem组件在非2in1设备上超长文本布局由缩略显示变更为换行显示](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b106#menuitem组件在非2in1设备上超长文本布局由缩略显示变更为换行显示) | 5.0.1(13) Beta3 | phone, tablet | targetSdkVersion ≥ 5.0.1(13)变更生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [Tabs组件barOverlap接口默认效果变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b106#tabs组件baroverlap接口默认效果变更) | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [Tabs组件底部页签默认高度由52vp变更为48vp](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b112#tabs组件底部页签默认高度由52vp变更为48vp) | 5.0.1(13) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [画布组件在绘制文本时设置globalCompositeOperation、fillStyle和globalAlpha属性的效果变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b112#canvasrenderingcontext2d和offscreencanvasrenderingcontext2d的globalcompositeoperation属性变更为在绘制文本时生效) | 5.0.1(13) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.1(13)变更生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| [NavDestination的Dialog模式默认支持系统动画](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b112#navdestination的dialog模式默认支持系统动画) | 5.0.1(13) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.1(13)变更生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| 命令行工具 | [禁止bm命令进行跨用户操作](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b106#禁止bm命令进行跨用户操作)* 该变更在11月19日更新的ROM版本引入，ROM版本号为5.0.0.107。 | 5.0.1(13) Beta3 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.1 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.1(13)",
+      "row": "| 命令行工具 | [应用发生OOM时Heapdump产物文件格式变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b112#应用发生oom时heapdump产物文件格式变更)* 该变更在2024年12月8日发布的patch版本引入，对应开发工具DevEco Studio版本为5.0.5.306。 | 5.0.1(13) Release | phone, tablet, 2in1 | 使用DevEco Studio 5.0.1 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Ability | [包管理bundleManager/AbilityInfo中新增必选属性orientationId](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#包管理bundlemanagerabilityinfo中新增必选属性orientationid) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| ArkData | [数据库插入长度为0的Uint8Array的数据，getRow、getValue 接口返回值发生变化](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#数据库插入长度为0的uint8array的数据getrowgetvalue-接口返回值发生变化) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [关系型数据管理@ohos.data.relationalStore.d.ts中getRdbStore接口新增错误码14800020，用于业务侧进行恢复重建数据库](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#关系型数据管理ohosdatarelationalstoredts中getrdbstore接口新增错误码14800020用于业务侧进行恢复重建数据库) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| ArkTS | [延迟加载（lazy import）影响异步任务执行时序变更为不影响异步任务执行时序](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#延迟加载lazy-import影响异步任务执行时序变更为不影响异步任务执行时序) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [执行幂运算（**）当底数是1，指数是NaN或ToNumber之后是NaN的情况的返回值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#执行幂运算当底数是1指数是nan或tonumber之后是nan的情况的返回值变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [String.prototype.lastIndexOf接口查找空字符串行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#stringprototypelastindexof-接口查找空字符串行为变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| ArkUI | [ImageAttributeModifier支持new方式创建ColorFilter对象传入colorFilter接口变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#imageattributemodifier支持new方式创建colorfilter对象传入colorfilter接口变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [轴事件分发机制变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#轴事件分发到xcomponent组件变更) | 5.0.2(14) Beta1 | 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [List组件首次创建布局时，Scroller控制器的跳转方法优先级变更为高于initialIndex的优先级](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#list组件首次创建布局时scroller控制器的跳转方法优先级变更为高于initialindex的优先级) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [Image组件的borderRadius接口支持动态修改](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#image组件的borderradius接口支持动态修改) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [RichEditor（富文本）在光标处于文本起始位置情况时向前删除空文本onWillChange回调变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#richeditor富文本在光标处于文本起始位置情况时向前删除空文本onwillchange回调变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [修复zIndex接口会影响组件在3D变换中的透视效果的错误行为](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#修复zindex接口会影响组件在3d变换中的透视效果的错误行为) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [屏幕Display对象rotation和orientation属性变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#屏幕display对象rotation和orientation属性变更) | 5.0.2(14) Beta1 | tablet | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [@ohos.arkui.uiExtension中uiExtension命名空间下新增properties必选属性](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#ohosarkuiuiextension中uiextension命名空间下新增properties必选属性) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [Navigation的menus接口、NavDestination的title和menus接口支持Resource类型资源](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#navigationnavdestination的title和menus接口支持resource类型资源) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [在PC/2in1设备上getWindowStatus和on('windowStatusChange')接口在窗口最大化状态返回值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#在2in1设备上getwindowstatus和onwindowstatuschange接口在窗口最大化状态返回值变更) | 5.0.2(14) Beta1 | tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [setWindowLayoutFullScreen、setImmersiveModeEnabledState接口在PC/2in1设备的自由多窗模式上禁用](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#setwindowlayoutfullscreensetimmersivemodeenabledstate接口在2in1设备和平板设备的自由多窗模式上禁用) | 5.0.2(14) Beta1 | tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [setWindowBrightness在PC/2in1设备的行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#setwindowbrightness在2in1设备的行为变更) | 5.0.2(14) Beta1 | 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Basic Service Kit | [setAppAccess错误码变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#setappaccess错误码变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Call Service Kit | [kit.CallKit.d.ts文件废弃，替换为kit.CallServiceKit.d.ts文件访问级别](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#kitcallkitdts文件废弃替换为kitcallservicekitdts文件访问级别) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Core File Kit | [持久化权限激活接口实现从sandbox_manager模块切换到UPMS模块](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#持久化权限激活接口实现从sandbox_manager模块切换到upms模块) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Core Vision Kit | [@hms.ai.vision.objectDetection.d.ts和@hms.ai.vision.skeletonDetection.d.ts方法文件变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#hmsaivisionobjectdetectiondts和hmsaivisionskeletondetectiondts方法文件变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Form Kit | [FormLink的router事件允许拉起Ability类型范围变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#formlink的router事件允许拉起ability类型范围变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Image Kit | [image.ImageSource.DecodingOptionsForPicture接口的desiredAuxiliaryPictures属性系统能力变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#imageimagesourcedecodingoptionsforpicture接口的desiredauxiliarypictures属性系统能力变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [image.Component.setAuxiliaryPictureInfo接口行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#imagecomponentsetauxiliarypictureinfo接口行为变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [image.Component.OH_AuxiliaryPictureNative_SetInfo()接口行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#imagecomponentoh_auxiliarypicturenative_setinfo接口行为变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [image接口Heif格式类型变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#imagecomponentoh_packingoptions结构体heif格式编码参数变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Media Kit | [AVErrorCode枚举值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#averrorcode枚举值变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| Scan Kit | [自定义界面扫码权限校验错误码变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#自定义界面扫码权限校验误码变更变更原因) | 5.0.2(14) Beta1 | phone, tablet | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [集成自定义界面扫码应用适配窗口子系统属性变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#集成自定义界面扫码应用适配窗口子系统属性变更) | 5.0.2(14) Beta1 | tablet | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [borderImage的outset属性按照实际的延伸距离来绘制边框向外扩展的效果](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b123sp16#borderimage的outset属性按照实际的延伸距离来绘制边框向外扩展的效果) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [Canvas使用toDataURL接口生成图片，对于带有透明度的图片，创建为“image/png”或“image/webp”格式时，其效果可能会发生变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b123sp16#canvas使用todataurl接口生成图片对于带有透明度的图片创建为imagepng或imagewebp格式时其效果可能会发生变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [bindSheet半模态面板视觉样式增加](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b123sp16#bindsheet半模态面板视觉样式增加) | 5.0.2(14) Beta1 | phone | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [bindSheet半模态面板标题与关闭按钮布局变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-b123sp16#bindsheet半模态面板标题与关闭按钮布局变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.2(14)变更生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [hdc file recv命令不支持操作媒体库目录](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#hdc命令file-recv命令不支持操作媒体库目录) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [hdc的file recv命令及shell读取权限变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#hdc命令file-recv命令及shell读取权限变更) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [hidumper组件内存输出显示每列后新增一个空格](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#hidumper组件内存输出显示每列后新增一个空格) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.2(14)",
+      "row": "| [安装的应用是已卸载的预置应用时校验签名是否一致](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-b123sp16#安装的应用是已卸载的预置应用时校验签名是否一致) | 5.0.2(14) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.2 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| Ability | [installSource字段规格变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section317) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| AppGallery Kit | [kit.StoreKit.d.ts文件废弃，替换为kit.AppGalleryKit.d.ts文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section257) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.3 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| ArkTS | [信号处理方法注册接口sigaction支持SA_RESETHAND标志位变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section233) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| ArkUI | [FrameNode被UINode包裹时isVisible接口返回值发生变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section322) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [富文本组件RichEditor的on回调中设置preventDefault()时的行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section326) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| AVCodec Kit | [OH_AVCodecOnStreamChanged在音频解码场景的默认行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section319) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| Localization Kit | [变更缅甸文，马来文和泰文的显示名称](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section301) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| Media Kit | [系统录屏应用调用的截屏接口变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section309) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| 应用配置文件 | [supportWindowModes选项配置fullscreen和split时，窗口全屏启动](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section328) | 5.0.3(15) Beta1 | 2in1 | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| ArkUI | [Image、Text和ListItem组件onDragStart接口默认行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5032#section363) | 5.0.3(15) Beta2 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [轴事件支持BEGIN、END及CANCEL类型回调触发](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5032#section356) | 5.0.3(15) Beta2 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [TextController的SetStyledString接口支持保存设置的属性字符串信息到调用的TextController中](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5032#section348) | 5.0.3(15) Beta2 | phone, tablet, 2in1 | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [2in1设备上，悬浮窗层级由低于dock栏调整为高于dock栏](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5032#section362) | 5.0.3(15) Beta2 | 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| Call Service Kit | [通话应用在前台时不显示通话胶囊](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5032#section359) | 5.0.3(15) Beta2 | phone, tablet | targetSdkVersion ≥ 5.0.3(15)变更生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| Performance Analysis Kit | [HiAppEvent模块onReceive、OH_HiAppEvent_OnReceive、takeNext接口支持应用分身故障日志订阅隔离](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5032#section364) | 5.0.3(15) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| ArkUI | [C API轴事件接口OH_ArkUI_UIInputEvent_GetSourceType和OH_ArkUI_UIInputEvent_GetToolType接口返回值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5033#section367) | 5.0.3(15) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [半模态SheetMode.EMBEDDED模式支持响应ESC键退出](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-5031#section324) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [动态照片自动播放效果变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-5032#section341) | 5.0.3(15) Beta2 | phone, tablet | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [NavDestination标题栏工具栏支持跟手滑动隐藏后，超过2秒未操作，不恢复显示](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-5032#section342) | 5.0.3(15) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [Tabs组件TabBar的显示和隐藏动效变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-5032#section918554861317) | 5.0.3(15) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.0.3(15)",
+      "row": "| [hilog日志在商用版本（nolog版本）开发者模式下默认日志级别由info变为warning](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5031#section312) | 5.0.3(15) Beta1 | phone, tablet, 2in1 | 使用DevEco Studio 5.0.3 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| ArkTS | [默认不合并依赖混淆规则变更说明](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section339) | 5.1.0(18) Release | phone, tablet, 2in1 | DevEco Studio 5.1.0(18) Release版本生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| ArkUI | [getKeyboardAvoidMode接口返回值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#ch2025040743551) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [XComponent组件上使用renderFit接口显示效果变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section392) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [当使用自定义组件名和内置属性重名时编译报错变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section407) | 5.1.0(18) Release | phone, tablet, 2in1 | 使用DevEco Studio 5.1.0 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [CanvasRenderingContext2D方法传NaN和Infinity值后执行的其他绘制方法由不绘制变更为正常绘制](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section159) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [CanvasRenderingContext2D的drawImage接口默认单位变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section155) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [修复blendMode接口离屏模式会影响组件设置的不透明度的问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section373) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [XComponent设置为Texture模式使用blendMode接口的行为由不生效变更为正常生效](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section372) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [setSpecificSystemBarEnabled接口在横屏的行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section150) | 5.1.0(18) Release | phone | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [滚动组件通用接口backToTop属性默认值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#ch2025041542754) | 5.1.0(18) Release | phone, tablet | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [页面退出场景自定义组件删除前移](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section337) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [V1和V2组件冻结能力增强](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section208) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [ArkUI双指长按行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#ch2025042447120) | 5.1.0(18) Release | phone, tablet | 全部生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| Audio Kit | [音频框架识别USB音频设备类型行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#ch2025041189292) | 5.1.0(18) Release | 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| Basic Services Kit | [osAccount.distributedAccount.DistributedAccountAbility.getOsAccountDistributedInfo接口返回值生成规则变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section419) | 5.1.0(18) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| CANN Kit（原HiAI Foundation Kit） | [原hiai_foundation目录下的头文件废弃，替换为CANNKit下的头文件](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#原hiai_foundation目录下的头文件废弃替换为cannkit下的头文件) | 5.1.0(18) Release | phone, tablet, 2in1 | 使用DevEco Studio 5.1.0 Release及以上版本时生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| Device Security Kit | [Device Security Kit优化错误码上报](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section355) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| Form Kit | [卡片支持能力增加安全校验](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#ch2025040702014) | 5.1.0(18) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| Media Kit | [应用创建SoundPool时调用media.createSoundPool接口变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#ch2025041671497) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| Performance Analysis Kit | [用户态trace打点格式变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section403) | 5.1.0(18) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| Remote Communication Kit | [fetch接口新增错误码返回](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section258) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| NDK开发 | [JIT功能默认关闭，需申请权限证书并通过审核后启用](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section398) | 5.1.0(18) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [按钮默认值变更为新增圆角矩形类型](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-5101#section174) | 5.1.0(18) Release | phone, tablet, 2in1 | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [修复Popup高级组件宽度限制计算错误的问题](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-5101#section173) | 5.1.0(18) Release | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [半模态底部样式最大高度默认避让状态栏安全区](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-5101#section394) | 5.1.0(18) Release | phone | targetSdkVersion ≥ 5.1.0(18)变更生效 |"
+    },
+    {
+      "version": "5.1.0(18)",
+      "row": "| [hiperf命令行调试工具使用权限缩小](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-5101#section410) | 5.1.0(18) Release | phone, tablet, 2in1 | 使用DevEco Studio 5.1.0 Release及以上版本时生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Ability Kit | [AbilityDelegator.startAbility()接口错误码变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#section284) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [借助Want进行文件分享时擦除不合法的URI](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025041851851) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| ArkTS | [通过字面量定义的数组在删除元素后再使用该字面量定义数组时数组内容异常](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025042210344) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| ArkUI | [GridRow组件columns参数和GridCol组件span参数默认值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025040702131) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [width和height支持的matchParent接口规格变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025040275645) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [文本与输入、信息展示、按钮与选择、滚动与滑动、图形绘制组件接口支持Resource类型](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#section383) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [UI Input相关NDK接口行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025040107071) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [使用字面量初始化CustomDialogController类实例导致的编译行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025071721132) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| ArkWeb | [ArkWeb基于上游社区的Chromium内核从114升级为132版本](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025050804757) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Connectivity Kit | [蓝牙BLE接口错误码变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025040175433) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Core File Kit | [@ohos.file.fs.d.ts中copy接口在拷贝后，对目标文件原有数据处理方式发生变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025040165962) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Driver Development Kit | [SendPipeRequest和SendPipeRequestWithAshmem传入错误参数时，返回值由USB_DDK_SUCCESS变更为USB_DDK_INVALID_PARAMETER](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#section336) | 6.0.0(20) Beta1 | 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Image Kit | [ImageInfo对象mimeType返回值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#section406) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Media Kit | [播放器所使用的内存归属变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025040590071) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| User Authentication Kit | [@ohos.useriam.userAuth限制应用从后台发起带交互界面的身份认证变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#section390) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| 其他 | [mincore接口功能补齐至与Linux一致](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025033190005) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [ptrace syscall操作未被停住的线程由返回0改为返回ESRCH.1](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#section170) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [限制ptrace接口仅可在开发者调试模式下使用](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6001#ch2025040675033) | 6.0.0(20) Beta1 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Ability Kit | [Ability Kit相关公共事件行为变更，增加管控](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025051312838) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| ArkTS | [TreeSet/TreeMap扩容导致比较器丢失问题正向修复](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025062036364) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| ArkUI | [位置控件功能变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025051227329) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [通用属性drawModifier接口行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025061956154) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [半模态SIDE侧边样式新增避让软键盘能力](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025061805350) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [CanvasRenderer的font接口支持自定义字体行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025062517095) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [去除保存控件系统提示弹框变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025070747763) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 6.0.0(20) Beta1新增接口，仅对使用6.0.0(20) Beta1开发的应用生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Basic Services Kit | [zlib.unzipFile和zlib.decompressFile解压文件接口变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025061279339) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Data Augmentation Kit | [retrieval.VectorQuery接口value字段变更为可选](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025070161508) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 6.0.0(20) Beta1新增接口，仅对使用6.0.0(20) Beta1开发的应用生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Localization Kit | [泰国、沙特阿拉伯、阿富汗和伊朗的默认历法变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025063039411) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| NDK开发 | [libc++ condition_variable::wait_for接口变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025062308656) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Share Kit | [on('dataReceive')接口新增必填参数capabilities](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6002#ch2025071525869) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 6.0.0(20) Beta1新增接口，仅对使用6.0.0(20) Beta1开发的应用生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Car Kit | [Car Kit接口新增801、1003810001、1003810002错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6003#ch2025082874213) | 6.0.0(20) Beta3 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Data Augmentation Kit | [rag.streamRun接口思考过程输出变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6003#ch2025080515191) | 6.0.0(20) Beta3 | phone, tablet, 2in1 | 6.0.0(20) Beta2新增接口，仅对使用6.0.0(20) Beta2开发的应用生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| Device Security Kit | [SECURITY_AUDIT_NOTIFY_EVENT_FILE_INTERCEPTED、FILE_INTERCEPTED枚举值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6003#ch2025072609886) | 6.0.0(20) Beta3 | phone, tablet, 2in1 | 6.0.0(20) Beta2新增接口，仅对使用6.0.0(20) Beta2开发的应用生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| ArkTS | [禁止在编译产物为JS的HAR包中使用注解](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6004#ch2025081914674) | 6.0.0(20) Beta5 | phone, tablet, 2in1 | 全部生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [bindSheet在2in1设备中默认避让窗口安全区](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-6001#section393) | 6.0.0(20) Beta1 | 2in1 | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [FullScreenLaunchComponent嵌入式运行元服务内容区避让系统安全区行为变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-6001#ch2025050666880) | 6.0.0(20) Beta1 | phone, tablet | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [半模态跟手样式弹窗显示位置避让规则变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-6001#section395) | 6.0.0(20) Beta1 | phone, tablet | targetSdkVersion ≥ 6.0.0(20)变更生效 |"
+    },
+    {
+      "version": "6.0.0(20)",
+      "row": "| [selectDynamicIcon接口新增错误码](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-ux-6002#ch2025061689518) | 6.0.0(20) Beta2 | phone, tablet, 2in1 | 6.0.0(20) Beta1新增接口，仅对使用6.0.0(20) Beta1开发的应用生效 |"
+    },
+    {
+      "version": "6.1.0(23)",
+      "row": "| ArkUI | [Progress组件color属性设置渐变色规格变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6101#ch2025092048488) |"
+    },
+    {
+      "version": "6.1.0(23)",
+      "row": "| [横屏悬浮窗尺寸优化](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6101#ch2025121230160) |"
+    },
+    {
+      "version": "6.1.0(23)",
+      "row": "| ArkGraphics 2D（该变更同时涉及ArkUI） | [WordBreak.HYPHENATION移除以下六种语言连字符“-”断词换行能力的支持：捷克语、印度尼西亚语、拉脱维亚语、马其顿语、斯洛伐克语、塞尔维亚语](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6101#ch2025112072187) |"
+    },
+    {
+      "version": "6.1.0(23)",
+      "row": "| Localization Kit | [全球化接口与运行时接口本地化显示优化及换行能力增强](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6101#ch2025121032586) |"
+    },
+    {
+      "version": "6.1.0(23)",
+      "row": "| Media Library Kit | [动态照片资源的PhotoKeys.DURATION字段值变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6101#ch2026051303944) |"
+    },
+    {
+      "version": "6.1.0(23)",
+      "row": "| Performance Analysis Kit | [JS OOM异常崩溃栈形式变更](https://developer.huawei.com/consumer/cn/doc/harmonyos-releases/changelogs-for-all-apps-6101#ch2025110734134) |"
+    }
+  ]
+}

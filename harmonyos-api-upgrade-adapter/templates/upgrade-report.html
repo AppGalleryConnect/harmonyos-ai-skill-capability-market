@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>API版本升级适配报告</title>
+  <style>
+  :root {
+    color-scheme: light;
+    --canvas: #f3f6fb; --paper: #fff; --ink: #242b38; --muted: #697586;
+    --line: #dfe5ee; --soft: #f7f9fc; --blue: #315684;
+    --navy: #192840; --hero-end: #2c507e;
+    --green: #287252; --green-bg: #edf7f1;
+    --amber: #96621c; --amber-bg: #fff6e8;
+    --red: #b23b36; --red-bg: #fdf0ef;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--canvas); color: var(--ink); font: 14px/1.65 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+  a { color: var(--blue); text-decoration-thickness: 1px; text-underline-offset: 3px; overflow-wrap: anywhere; }
+  :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+  h1, h2, h3, h4, p, dl, dd { margin: 0; }
+  h1 { font-size: 30px; line-height: 1.35; letter-spacing: -.6px; }
+  h2 { font-size: 18px; line-height: 1.5; letter-spacing: -.2px; }
+  h3 { font-size: 15px; line-height: 1.6; }
+  h4 { font-size: 14px; line-height: 1.6; }
+  code, .path { font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace; overflow-wrap: anywhere; }
+  code { font-size: 12px; }
+  .report { max-width: 1120px; margin: 28px auto; padding: 0 24px; }
+  .template-note { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 4px 16px; margin-bottom: 14px; color: var(--muted); font-size: 12px; }
+  .template-note strong { color: var(--ink); font-weight: 600; }
+  .hero { padding: 30px 32px; border-radius: 18px; background: linear-gradient(112deg, var(--navy), var(--hero-end)); color: #fff; overflow-wrap: anywhere; }
+  .hero-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+  .hero-subtitle { display: flex; flex-wrap: wrap; gap: 2px 9px; margin-top: 13px; color: #dce6f3; }
+  .hero-subtitle + .hero-subtitle { margin-top: 6px; }
+  .hero-subtitle strong { color: #fff; font-weight: 500; }
+  .hero-subtitle > * { min-width: 0; overflow-wrap: anywhere; }
+  .hero-status { flex-shrink: 0; padding: 5px 12px; border: 1px solid #879bb8; border-radius: 999px; background: #ffffff0c; font-size: 12px; }
+  .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 20px; }
+  .metrics.six { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .metric { display: flex; flex-direction: column; min-width: 0; padding: 18px 20px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); box-shadow: 0 3px 12px #243a5b04; }
+  .metric dd { order: -1; font-size: 30px; font-weight: 650; line-height: 1.3; font-variant-numeric: tabular-nums; }
+  .metric dt { margin-top: 8px; color: var(--muted); font-size: 13px; }
+  .metric-decisions { display: block; margin-top: 4px; font-size: 12px; overflow-wrap: anywhere; }
+  .panel { min-width: 0; overflow-wrap: anywhere; margin-top: 20px; padding: 24px; border: 1px solid var(--line); border-radius: 14px; background: var(--paper); box-shadow: 0 4px 18px #243a5b03; }
+  .section-heading { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; margin-bottom: 16px; }
+  .project-chapter { --chapter-inset: 10px; --entry-indent: 16px; }
+  .project-chapter + .project-chapter { margin-top: 24px; }
+  .project-chapter ul { padding-inline-start: 20px; }
+  .caption, .path { color: var(--muted); font-size: 12px; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+  .project-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 12px; }
+  .project-table th, .project-table td { padding: 12px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  .project-table th { color: var(--muted); font-weight: 500; }
+  .project-table tbody tr:last-child td { border-bottom: 0; }
+  .project-table p + p { margin-top: 4px; }
+  .project-outcomes { display: grid; gap: 4px; }
+  .project-table .project-outcomes p { margin: 0; }
+  .project-name { font-weight: 600; overflow-wrap: anywhere; }
+  .result + .result { margin-top: 18px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .result-heading { min-width: 0; }
+  .change-link { overflow-wrap: anywhere; }
+  .change-link:not([href]) { color: var(--ink); text-decoration: none; }
+  .result-meta { display: flex; align-items: baseline; flex-wrap: wrap; gap: 6px 24px; margin: 10px 0 14px; color: var(--muted); font-size: 12px; }
+  .result-meta p { min-width: 0; overflow-wrap: anywhere; }
+  .meta-label { color: var(--ink); font-weight: 500; }
+  .category { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+  .behavior-summary { display: grid; min-width: 0; max-width: 100%; gap: 6px; color: #4d5869; font-size: 13px; }
+  .behavior-summary > p { min-width: 0; max-width: 100%; overflow-wrap: anywhere; word-break: normal; }
+  .behavior-summary > .official-excerpt { white-space: pre-wrap; }
+  .decision-table { width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 13px; }
+  .decision-table th, .decision-table td { min-width: 0; padding: 14px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  .decision-table th { color: var(--muted); font-weight: 500; }
+  .decision-table td { white-space: pre-wrap; }
+  .decision-table tbody tr:last-child td { border-bottom: 0; }
+  .decision-table .caption { margin-top: 6px; }
+  .summary-text { color: #4d5869; font-size: 13px; }
+  .state { display: inline-flex; align-items: center; gap: 6px; white-space: normal; color: var(--muted); font-size: 12px; }
+  .state::before { content: ""; display: inline-block; flex: 0 0 6px; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  [data-tone="success"] { color: var(--green); }
+  [data-tone="warning"] { color: var(--amber); }
+  [data-tone="error"] { color: var(--red); }
+  details { margin-top: 14px; border-top: 1px solid var(--line); }
+  summary { width: fit-content; padding: 12px 0 0; color: var(--blue); cursor: pointer; font-size: 12px; }
+  details[open] > summary { padding-bottom: 12px; }
+  .detail-fold { margin: 0; border: 0; }
+  .detail-fold > summary { padding-top: 0; }
+  .report-fold { margin: 0; border: 0; }
+  .report-fold > summary { width: auto; padding: 0; }
+  .report-fold > summary :is(h2, h3, h4) { display: inline; color: var(--ink); }
+  .project-chapter > .report-fold > summary { padding: 8px var(--chapter-inset); border-radius: 8px; background: var(--soft); }
+  .project-chapter > .report-fold > summary > h3 { font-size: 16px; font-weight: 700; }
+  .project-chapter > .report-fold > summary .caption { font-size: 12px; font-weight: 400; }
+  .project-chapter > .report-fold[open] > summary { margin-bottom: 8px; }
+  .project-chapter > .report-fold > :not(summary) { margin-inline-start: calc(var(--chapter-inset) + var(--entry-indent)); }
+  .project-chapter .change-fold > summary > h4 { font-size: 14px; font-weight: 600; }
+  .report-fold > .result + .result { margin-top: 10px; padding-top: 10px; }
+  .fold-status { display: block; margin-top: 4px; color: var(--muted); font-size: 12px; font-weight: 400; }
+  .change-fold .behavior-summary { margin-top: 8px; }
+  .overview-notes { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .overview-notes h3 { margin-bottom: 6px; }
+  .overview-notes h3:not(:first-child) { margin-top: 12px; }
+  .overview-notes .caption + .todo-list { margin-top: 6px; }
+  .overview-notes > a { display: inline-block; margin-top: 6px; }
+  .detail-body { padding: 18px; border-radius: 8px; background: var(--soft); }
+  .detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
+  .detail-grid > div { min-width: 0; }
+  .detail-grid dt { margin-bottom: 4px; color: var(--muted); font-size: 12px; }
+  .detail-grid dd { font-size: 13px; overflow-wrap: anywhere; }
+  .detail-grid .full { grid-column: 1 / -1; }
+  .row-associations { min-width: 0; }
+  .row-associations .section-heading { margin-bottom: 8px; }
+  .rows-table-scroll { max-height: 360px; margin-top: 12px; overflow: auto; scrollbar-gutter: stable; }
+  .rows-table { width: 100%; min-width: 920px; border-collapse: separate; border-spacing: 0; table-layout: fixed; font-size: 12px; }
+  .rows-table th, .rows-table td { padding: 10px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  .rows-table td { white-space: pre-wrap; }
+  .rows-table th:nth-child(3), .rows-table td:nth-child(3), .rows-table th:nth-child(4), .rows-table td:nth-child(4) { padding-inline: 6px; }
+  .rows-table th { position: sticky; top: 0; z-index: 1; background: var(--soft); color: var(--muted); font-weight: 500; box-shadow: inset 0 -1px var(--line); }
+  .rows-table .logical-row { display: block; margin-bottom: 4px; color: var(--muted); }
+  .rows-table .full-row-id { display: block; overflow-wrap: anywhere; white-space: normal; }
+  .row-report-summary { display: block; }
+  .row-evidence summary, .approval-evidence summary { padding: 8px 0; font-size: 12px; }
+  .row-evidence .detail-body { padding: 10px; }
+  .change-summary { margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .verification { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+  .verification dt { margin-bottom: 7px; color: var(--muted); font-size: 12px; }
+  .verification dd + dd { margin-top: 6px; }
+  .verification .caption { font-size: 12px; }
+  .todo-list { display: grid; gap: 9px; margin: 0; padding-left: 20px; color: #4d5869; font-size: 13px; }
+  .todo-list > li { min-width: 0; max-width: 100%; overflow-wrap: anywhere; }
+  .todo-list li::marker { color: var(--muted); }
+  .follow-up-note { margin-bottom: 20px; }
+  .follow-up-project { min-width: 0; }
+  .follow-up-project + .follow-up-project { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); }
+  .follow-up-project h3 { margin-bottom: 16px; overflow-wrap: anywhere; }
+  .follow-up-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .follow-up-grid > details { min-width: 0; margin: 0; }
+  .resources { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px 20px; margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .resources dt { margin-bottom: 3px; font-size: 12px; }
+  .resources dd { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+  .phase-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px; }
+  .phase { padding: 10px 14px; border-left: 2px solid var(--line); }
+  .phase dt { color: var(--muted); font-size: 12px; }
+  .phase dd { margin-top: 3px; font-size: 13px; }
+  .assertion-table { width: 100%; margin-top: 18px; border-collapse: collapse; table-layout: fixed; font-size: 12px; }
+  .assertion-table th, .assertion-table td { padding: 10px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; overflow-wrap: anywhere; }
+  .assertion-table th { color: var(--muted); font-weight: 500; }
+  .footer { padding: 18px 2px 0; color: var(--muted); font-size: 12px; text-align: end; }
+  .hero-status[data-tone="success"] { color: #def4e7; border-color: #9ebcac; background: #77aa8820; }
+  .hero-status[data-tone="warning"] { color: #ffe3b1; border-color: #bfa77f; background: #b7955120; }
+  .hero-status[data-tone="error"] { color: #ffd2ce; border-color: #c29a99; background: #b45a5520; }
+  .evidence-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 16px; margin-top: 16px; }
+  .evidence-grid figure { min-width: 0; margin: 0; }
+  .evidence-image { display: block; max-width: 100%; height: auto; margin-bottom: 6px; }
+  .detail-body > p, .detail-body > details, .detail-body > div + div { margin-top: 12px; }
+  @media (max-width: 900px) { .metrics.six { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 640px) {
+    .report { margin: 16px auto; padding: 0 14px; }
+    .hero { padding: 24px 22px; border-radius: 14px; }
+    h1 { font-size: 25px; }
+    .hero-top { flex-direction: column; gap: 12px; }
+    .hero-status { align-self: flex-start; }
+    .metrics, .metrics.six { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 14px; }
+    .metric { padding: 15px 17px; }
+    .panel { margin-top: 14px; padding: 20px; }
+    .project-chapter { --entry-indent: 12px; }
+    .project-chapter + .project-chapter { margin-top: 18px; }
+    .verification, .detail-grid { grid-template-columns: 1fr; gap: 16px; }
+    .follow-up-grid { grid-template-columns: 1fr; gap: 20px; }
+    .project-table, .project-table tbody, .project-table tr { display: block; }
+    .project-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .project-table colgroup { display: none; }
+    .project-table tbody tr + tr { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+    .project-table td { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 12px; padding: 8px 0; border: 0; }
+    .project-table td::before { content: attr(data-label); color: var(--muted); font-weight: 500; }
+    .result-meta { gap: 6px; }
+    .result-meta p { width: 100%; }
+    .decision-table, .decision-table tbody, .decision-table tr { display: block; }
+    .decision-table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    .decision-table colgroup { display: none; }
+    .decision-table tbody tr + tr { margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--line); }
+    .decision-table td { display: block; padding: 8px 0; border: 0; }
+    .decision-table td::before { display: block; margin-bottom: 6px; content: attr(data-label); color: var(--muted); font-weight: 500; white-space: normal; }
+    .resources { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .detail-body { padding: 14px; }
+    summary { min-height: 44px; padding-top: 13px; }
+    .assertion-table th, .assertion-table td { padding: 8px 4px; }
+  }
+  @media (max-width: 359px) { .metrics, .metrics.six, .resources, .phase-grid { grid-template-columns: 1fr; } }
+  @media print {
+    :root { --canvas: #fff; --paper: #fff; --line: #bbb; }
+    body { font-size: 11pt; }
+    .report { max-width: none; margin: 0; padding: 0; }
+    .hero { border: 1px solid var(--line); background: none; color: var(--ink); }
+    .hero-subtitle, .hero-subtitle strong { color: var(--muted); }
+    .hero-status, .hero-status[data-tone] { color: var(--ink); border-color: var(--line); background: none; }
+    .metric, .panel { box-shadow: none; }
+    .metric, .result-heading, .verification > div { break-inside: avoid; }
+    .panel { border-radius: 0; }
+    .follow-up-grid { grid-template-columns: 1fr; }
+    .detail-body { background: none; padding: 8px 0; }
+    details::details-content { display: block; content-visibility: visible; }
+    details > .detail-body { display: block; }
+    a { text-decoration: underline; }
+    .project-table { display: table; }
+    .project-table thead { display: table-header-group; position: static; width: auto; height: auto; overflow: visible; clip-path: none; }
+    .project-table tbody { display: table-row-group; }
+    .project-table tr { display: table-row; }
+    .project-table colgroup { display: table-column-group; }
+    .project-table td { display: table-cell; padding: 10px 6px; border-bottom: 1px solid var(--line); }
+    .project-table td::before { display: none; }
+    .rows-table-scroll { max-height: none; overflow: visible; scrollbar-gutter: auto; }
+    .rows-table { min-width: 0; }
+    .rows-table thead { display: table-header-group; }
+    .rows-table th { position: static; }
+    .rows-table tr { break-inside: avoid; }
+    .decision-table { display: table; }
+    .decision-table thead { display: table-header-group; position: static; width: auto; height: auto; overflow: visible; clip-path: none; }
+    .decision-table tbody { display: table-row-group; }
+    .decision-table tr { display: table-row; break-inside: avoid; }
+    .decision-table colgroup { display: table-column-group; }
+    .decision-table td { display: table-cell; padding: 10px 8px; border-bottom: 1px solid var(--line); }
+    .decision-table td::before { display: none; }
+  }
+  </style>
+</head>
+<body>
+  <!-- U09 唯一报告模板：由内置 report 工具保留 head/内联样式，仅填充 adapter 内容区域；工具读取当前任务同源数据，不编写临时生成脚本。
+    按任务索引列全工程，包括未开始、扫描失败和CSV_ONLY；共享构建/宿主证据引用一次，分别说明覆盖。
+    首页按分组rowResults逐rowId统计，交付时把范围外归入无需适配，四类合计等于原始逻辑行数。重复行独立计数；另按当前明确决定展示获批修复和接受新行为行数。
+    工程总览只按工程名称、target升级、compatible、原始扫描结果、适配情况、编译构建、运行情况排列；模块名作辅助文字，不展示product或扫描批次。
+    总览编译/运行只列实际状态及必要限制，命令、日志和设备等详细信息保留在独立验证区。
+    每工程按准确规则生成条目。变更ID和完整名称共用一个官网链接，取Title中HYPERLINK或已有准确URL并保留锚点；缺失不猜测，使用普通标题并记录缺口。
+    标题下集中标注评估分类/行数与修复结论/行数，两者分别统计同一组全部原始行；不以已适配表示验收通过。
+    DevEco 覆盖条目引用已核对的官方前后对照原文或对照表。仅有变更影响时保留官网链接与 target 隔离信息。源码位置、工程触发和兼容理由保留在逐行表及总结。
+    原始行关联必须逐逻辑行完整展示rowId、代码位置、评估分类及结果CSV三列；禁止省略hash、行号范围、去重或截断正文。
+    处理说明优先用模型reportSummary一两句概括，完整原段落折叠保留在同一单元格。CSV 输出单行说明。业务与触发读取changeSummary.business。
+    表格行来自与CSV共用的当前逐行投影，分类按完整rowId关联分组rowResults；缺失时依据spec补齐分组判断，无法明确则保留待分类，不能从处理结论反推。
+    取材原文/精确通道/阅读范围继续保留在现有分组及证据，不重复设置规则与官方来源卡片。
+    全部工程之后按工程合并遗留事项和逐行后续事项。扫描缺口摘要去重，同批次扫描证据接在对应条目末尾；建议读取progress.testSuggestions并与待办及验收状态分开展示。
+    配置旧值/目标/实施状态来自实际回读；compatible保持事实如实写，不用编译SDK或HAR历史from替代原target。
+    CSV追加评估结论/处理结论/处理说明/后续事项，已选设备时另有截图列；NO_CHANGE显示无需适配，MODIFIED显示已适配，NOT_IMPLEMENTED显示未实施，OUT_OF_SCOPE显示无需适配，其余显示待决策并说明原因。
+    rowId、MODEL_ASSESSED、内部处理状态及兼容证据保留在本报告/分组；已适配不表示已验收。
+    未成功完整构建只能部分完成；源码/配置/SDK变化后重新验证。不新增行为复扫、通用接口可用性或自动最低设备任务。
+    零行、全无需适配、待批准、工具缺失、失败和中断仍交付；未知写原因。结构齐全不证明实际读取资料，模型复测与工具/设备实测分别表达。
+    最终清除模板提示，核对完整来源、精确通道、理由及过期状态，回读全部文件；用户文件另存保护。
+  -->
+  <!-- adapter:report -->
+  <main class="report">
+    <div class="template-note"><strong>HarmonyOS · API 适配</strong><span>模板预览 · 尚未填写实际结果</span></div>
+    <header class="hero">
+      <div class="hero-top"><h1>API版本升级适配报告</h1><span class="hero-status">结论待填写</span></div>
+      <p class="hero-subtitle"><strong>扫描目录</strong><span>· target 未知 → 未知</span><span>· 最低兼容 未知</span></p>
+    </header>
+    <!-- 未取得真实数量时保留“—”并说明原因，不能用 0 代替未知。 -->
+    <dl class="metrics"><div class="metric"><dt>必须适配</dt><dd>—</dd></div>
+<div class="metric"><dt>可选适配</dt><dd>—</dd></div>
+<div class="metric"><dt>无需适配</dt><dd>—</dd></div>
+<div class="metric"><dt>待分类</dt><dd>—</dd></div></dl>
+
+    <section class="panel" aria-labelledby="projects-title">
+      <div class="section-heading"><h2 id="projects-title">工程总览</h2><span class="caption">全部参与工程 · 逐工程保留状态</span></div>
+      <!-- 多工程时逐项复制 tbody 中的行，包含未开始、扫描失败、CSV_ONLY；原始CSV有真实路径后再添加链接。 -->
+      <table class="project-table">
+        <caption class="visually-hidden">参与工程、配置升级及适配验证概况</caption>
+        <colgroup><col style="width:17%"><col style="width:20%"><col style="width:12%"><col style="width:13%"><col style="width:16%"><col style="width:11%"><col style="width:11%"></colgroup>
+        <thead><tr><th scope="col">工程名称</th><th scope="col">target 升级情况</th><th scope="col">compatible</th><th scope="col">原始扫描结果</th><th scope="col">适配情况</th><th scope="col">编译构建</th><th scope="col">运行情况</th></tr></thead>
+        <tbody><tr>
+          <td data-label="工程名称"><div><p class="project-name">工程名称待填写</p><p class="caption">模块名称待填写</p></div></td>
+          <td data-label="target 升级情况">未知 → 未知</td>
+          <td data-label="compatible"><div>— · 状态待填写</div></td>
+          <td data-label="原始扫描结果"><div><p>— 行</p><span class="caption">原始 CSV 待关联</span></div></td>
+          <td data-label="适配情况"><div class="project-outcomes"><!-- 各处理结论及行数分别用一个p展示。 --><p>处理情况与行数待填写</p></div></td>
+          <td data-label="编译构建"><div><span class="state">未填写</span></div></td>
+          <td data-label="运行情况"><div><span class="state">未填写</span></div></td>
+        </tr></tbody>
+      </table>
+      <div class="overview-notes">
+        <h3>实际改动 · — 项</h3>
+        <ul class="todo-list"><li><a href="#csv-assessment-title">变更名称待填写</a> · 已适配 — 行</li></ul>
+        <h3>待处理事项</h3>
+        <p class="caption">待填写本轮未决、复核和证据缺口</p>
+        <a class="caption" href="#follow-up-issues">查看全部遗留事项</a>
+      </div>
+    </section>
+    <!-- 仅展示有明确用户答复且方案可核对的变更项，按实际答复范围展示。没有可核对的决定时省略。 -->
+    <section class="panel" aria-labelledby="key-decisions-title">
+      <details class="report-fold"><summary><h2 id="key-decisions-title">关键决策点 <span class="caption">· — 项</span></h2></summary>
+      <table class="decision-table">
+        <colgroup><col style="width:28%"><col style="width:36%"><col style="width:36%"></colgroup>
+        <thead><tr><th scope="col">变更条目</th><th scope="col">提交的方案</th><th scope="col">用户决定</th></tr></thead>
+        <tbody><tr>
+          <td data-label="变更条目"><a class="change-link">变更 ID 与完整名称待填写</a><p class="caption">所属工程待填写</p></td>
+          <td data-label="提交的方案">实际方案项说明</td>
+          <td data-label="用户决定">决定及覆盖行数，附实际答复与来源</td>
+        </tr></tbody>
+      </table>
+      </details>
+    </section>
+    <!-- 以下工程正文按实际工程重复，标题带 projectKey；不可只保留成功工程。 -->
+    <section class="panel" aria-labelledby="results-title">
+      <div class="section-heading"><h2 id="results-title">工程名称 · 评估与修复</h2><span class="caption">行为变化、逐行结论与后续事项</span></div>
+      <section class="project-chapter" aria-labelledby="applicability-title">
+        <details class="report-fold"><summary><h3 id="applicability-title">1. 按工程适用性排除 <span class="caption">· — 项</span></h3></summary>
+        <p>实际排除条目、原因及适用范围待填写</p>
+        </details>
+      </section>
+      <section class="project-chapter" aria-labelledby="csv-assessment-title">
+        <details class="report-fold"><summary><h3 id="csv-assessment-title">2. DevEco 规则包覆盖条目 <span class="caption">· — 项 · — 行</span></h3></summary>
+      <!-- 每工程按准确变更条目重复 result；所有ID须包含工程与规则身份以保持唯一。 -->
+      <article class="result">
+        <details class="report-fold change-fold"><summary><h4>变更 ID 与完整名称待填写<span class="fold-status">评估分类及修复状态待填写</span></h4></summary>
+          <p class="caption"><a class="change-link">官方变更说明</a></p>
+          <div class="behavior-summary">
+            <p class="official-excerpt"><span class="meta-label">变更前：</span>官方变更前原文</p>
+            <p class="official-excerpt"><span class="meta-label">变更后：</span>官方变更后原文</p>
+            <p><span class="meta-label">版本隔离：</span>准确的生效条件待填写；未知须说明</p>
+          </div>
+        <details class="detail-fold"><summary>逐行依据与处理明细 · — 行</summary><div class="detail-body">
+          <section class="row-associations" aria-labelledby="project-rule-rows-title">
+            <div class="section-heading"><p id="project-rule-rows-title"><strong>原始行关联</strong></p><span class="caption">逐原始逻辑行 · 共 — 行</span></div>
+            <p class="caption">工程与原始 CSV 来源待填写；完整 rowId 不省略、不合并</p>
+            <div class="rows-table-scroll" role="region" aria-labelledby="project-rule-rows-title" tabindex="0">
+              <table class="rows-table">
+                <caption class="visually-hidden">本变更条目的逐行评估、处理结论与后续事项</caption>
+                <colgroup><col style="width:20%"><col style="width:18%"><col style="width:7%"><col style="width:7%"><col style="width:32%"><col style="width:16%"></colgroup>
+                <thead><tr><th scope="col">原始逻辑行 / 完整 rowId</th><th scope="col">代码位置</th><th scope="col">评估分类</th><th scope="col">处理结论</th><th scope="col">处理说明</th><th scope="col">后续事项</th></tr></thead>
+                <!-- 逐原始行复制tr；包括重复位置。完整文本自然换行，不用省略号或行号范围代替实际行。 -->
+                <tbody><tr>
+                  <td><span class="logical-row">逻辑行 —</span><code class="full-row-id">完整 rowId 待填写</code></td>
+                  <td><code class="path">调用文件与行号待填写</code></td>
+                  <td>评估分类待填写</td><td>处理结论待填写</td><td><span class="row-report-summary">待填写本行一两句核心理由与处理。</span><details class="row-evidence"><summary>完整依据</summary><div class="detail-body">待填写完整处理说明，不截断、不改写CSV。</div></details></td><td>后续事项待填写；无则 —</td>
+                </tr></tbody>
+              </table>
+            </div>
+          </section>
+          <dl class="detail-grid change-summary">
+<div><dt>行为与业务触发</dt><dd>待填写实际业务触发条件、调用上下文及适用性总结。</dd></div>
+<div><dt>批准与实际差异</dt><dd>待填写目标候选/最终目标及答复来源、全部评估返回与合并后的spec、获批文件/rowIds/配置、共享修改及未批准项；实质变化后的再次确认与断点沿用依据分别列出。</dd></div>
+<div><dt>判断与兼容说明</dt><dd>待填写 SDK 默认值、属性链、实参/回调、跨系统或宿主差异的实际依据。</dd></div>
+<div><dt>证据缺口与下一步</dt><dd>待填写未核实条件、补充来源、冲突、业务决定及具体后续事项。</dd></div></dl></div></details>
+        </details>
+      </article>
+      <!-- 仅在有真实候选时展示，置于本章的正式逐行明细之后。 -->
+      <details><summary>C/C++ 文本候选 · — 条（待人工核对）</summary><div class="detail-body">
+        <p><strong>模块名待填写</strong></p><ul><li>规则 ID、API 和代码位置待填写</li></ul>
+      </div></details>
+        </details>
+      </section>
+      <section class="project-chapter" aria-labelledby="rule-gap-title">
+        <details class="report-fold"><summary><h3 id="rule-gap-title">3. DevEco 规则包未覆盖条目补充处理 <span class="caption">· — 项</span></h3></summary>
+        <article class="result"><details class="report-fold change-fold"><summary><h4>补充评估条目待填写<span class="fold-status">评估与处理状态待填写</span></h4></summary><p>评估依据及证据待填写</p></details></article>
+        </details>
+      </section>
+      <section class="project-chapter" aria-labelledby="verification-title">
+      <details class="report-fold"><summary><h3 id="verification-title">4. 独立验证 <span class="caption">· 状态待填写</span></h3></summary>
+      <dl class="verification"><div><dt>当前源码完整构建</dt><dd><span class="state">未填写</span></dd><dd class="caption">库与宿主构建分别记录</dd></div>
+<div><dt>功能验证</dt><dd><span class="state">未填写</span></dd><dd class="caption">按已授权范围记录实际覆盖</dd></div>
+<div><dt>视觉 / 有效对比</dt><dd><span class="state">未填写</span></dd><dd class="caption">与功能结果分别表达</dd></div></dl>
+      <details><summary>验证依据与限制</summary><div class="detail-body"><dl class="detail-grid"><div><dt>编码与 SDK 检查</dt><dd>待填写 MODEL_ASSESSED 依据及真实 SDK 语法/类型检查的工具、命令、日志与限制。</dd></div>
+<div><dt>构建与宿主 / ABI</dt><dd>待填写 product、target、ABI、当前输入、退出码、产物哈希及库的实际消费路径。</dd></div>
+<div><dt>设备验证与测试报告</dt><dd>待填写独立的设备选择、分类组合、答复来源、实际设备/用例/全部rowIds、功能/视觉结果与未选/待分类缺口；关联实际test-report.html。</dd></div>
+<div><dt>对比边界与清理</dt><dd>待填写before真实构建/签名/归档受阻及用户决定、before/after实测、有效对比、入口/埋点/外部服务/数据复位限制和本次实例清理；不选对比明确不适用，代码再变后重建after并复测。</dd></div></dl></div></details>
+      </details>
+      </section>
+    </section>
+    <section class="panel" aria-labelledby="follow-up-title">
+      <div class="section-heading"><h2 id="follow-up-title">遗留事项与测试建议</h2></div>
+      <p class="caption follow-up-note">测试建议供后续安排，实际验证结果见各工程“独立验证”。</p>
+      <section class="follow-up-project" aria-labelledby="follow-up-project"><h3 id="follow-up-project">工程名称</h3><div class="follow-up-grid">
+        <details><summary id="follow-up-issues">遗留事项 · — 条</summary><div class="detail-body"><ul class="todo-list"><li>待填写：合并实际缺口及逐行后续事项，保留关联行身份，同一工程内去除完全重复内容。</li><li>扫描缺口待填写 <span class="caption">· 扫描证据待关联</span></li></ul>
+<p class="caption">未记录遗留事项；不代表验证通过。</p></div></details>
+        <details><summary>测试建议 · — 条</summary><div class="detail-body"><ul class="todo-list"><li>待填写：测试对象、具体操作、预期结果及适用设备或版本，覆盖实际受影响的功能、视觉及兼容场景。</li></ul>
+<p class="caption">尚未提供针对性测试建议。</p></div></details>
+      </div></section>
+    </section>
+  </main>
+  <!-- /adapter:report -->
+</body>
+</html>

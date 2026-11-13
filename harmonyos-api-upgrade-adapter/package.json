@@ -1,0 +1,19 @@
+{
+  "name": "@local/harmonyos-api-upgrade-adapter",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/test-suite.mjs all",
+    "test:adapter": "node scripts/test-suite.mjs adapter",
+    "test:scanner": "node scripts/test-suite.mjs scanner",
+    "scanner": "node scripts/scanner/bin/harmony-api-scan.mjs",
+    "validate": "node scripts/maintenance/validation/validate-skill.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}

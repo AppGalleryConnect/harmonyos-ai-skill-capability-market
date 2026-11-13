@@ -1,0 +1,42 @@
+{
+  "title": "API版本升级适配报告",
+  "projects": [
+    {
+      "projectKey": "任务索引中的工程键",
+      "configuration": {
+        "oldTarget": "原 target",
+        "target": "本次 target",
+        "compatible": "保持的 compatible",
+        "implementation": "实际配置修改与回读事实"
+      },
+      "changes": [
+        {
+          "ruleId": "准确规则ID",
+          "version": "精确版本及通道",
+          "before": "变更前行为",
+          "after": "变更后行为",
+          "targetIsolation": "官方 target 隔离条件或实际缺口",
+          "business": "本业务的真实触发条件和影响",
+          "approval": "实际答复来源与批准范围",
+          "compatibility": "实际兼容分析",
+          "gaps": "未解决事项及下一步"
+        }
+      ],
+      "verification": [
+        {
+          "name": "编译构建",
+          "status": "未执行",
+          "details": "实际原因与范围",
+          "evidence": []
+        },
+        {
+          "name": "设备运行",
+          "status": "未执行",
+          "details": "未选择设备测试",
+          "evidence": []
+        }
+      ],
+      "nextSteps": []
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+# SDK_VERSION 映射表
+# 此文件维护 SDK_VERSION (build_config.json 中 buildEnvPrepare.SDK_VERSION) 
+# 到 command-line-tools 版本号 (对应 /sfs/harmony/sdk-versions/ 下的目录名) 的映射关系。
+# 当有新的 SDK 版本时，在此文件中追加映射条目即可。
+#
+# 字段说明：
+#   SDK_VERSION 值来自 build_config.json 的 buildEnvPrepare.SDK_VERSION 字段
+#   commandline_tools_version 来自 build_config.json 顶层 commandline_tools_version 字段
+#   sdk_dir 是 /sfs/harmony/sdk-versions/ 下的实际目录名
+#   api_level 是该 SDK 对应的 API 版本号
+#
+# 映射优先级：
+#   1. 优先使用 commandline_tools_version（如果存在），直接对应 sdk_dir
+#   2. 如果 commandline_tools_version 不存在或本地无对应目录，使用 SDK_VERSION 通过本文件映射表查找 sdk_dir
+
+mappings:
+  # === API 20-24 (Release) ===
+  # 这些版本的 commandline_tools_version 在本地没有对应目录，使用 6.1.0.760 作为 fallback
+  "NEXTSDK6.0.0.47_SP21":
+    commandline_tools_version: null
+    sdk_dir: "6.1.0.760"
+    api_level: 20
+
+  "NEXTSDK6.0.1.112_SP33":
+    commandline_tools_version: "6.0.1.149"
+    sdk_dir: "6.1.0.760"
+    api_level: 21
+
+  "NEXTSDK6.0.2.130_SP31":
+    commandline_tools_version: "6.0.2.540"
+    sdk_dir: "6.1.0.760"
+    api_level: 22
+
+  "NEXTSDK6.1.0.105-SP35":
+    commandline_tools_version: "6.1.0.718"
+    sdk_dir: "6.1.0.760"
+    api_level: 23
+
+  "NEXTSDK6.1.1.125_SP36":
+    commandline_tools_version: "6.1.1.180"
+    sdk_dir: "6.1.0.760"
+    api_level: 24
+
+  # === API 26 (Canary - 废弃) ===
+  "NEXTSDK26.0.0.21_SP30":
+    commandline_tools_version: "26.0.0.430"
+    sdk_dir: "26.0.0.430"
+    api_level: 26
+
+  "NEXTSDK26.0.0.22_SP30":
+    commandline_tools_version: "26.0.0.440"
+    sdk_dir: "26.0.0.440"
+    api_level: 26
+
+  "NEXTSDK26.0.0.23_SP30":
+    commandline_tools_version: "26.0.0.450"
+    sdk_dir: "26.0.0.450"
+    api_level: 26
+
+  # === API 26 (current) ===
+  # 这些版本没有 commandline_tools_version，通过映射表指定最接近的本地版本
+  "NEXTSDK26.0.0.24_SP30":
+    commandline_tools_version: null
+    sdk_dir: "26.0.0.510"
+    api_level: 26
+
+  "NEXTSDK26.0.0.25_SP30C00":
+    commandline_tools_version: null
+    sdk_dir: "26.0.0.630"
+    api_level: 26
+
+  "NEXTSDK26.0.0.27_SP30C00":
+    commandline_tools_version: null
+    sdk_dir: "26.0.0.640"
+    api_level: 26
+
+  "NEXTSDK26.0.0.30_SP30C00":
+    commandline_tools_version: "26.0.0.630"
+    sdk_dir: "26.0.0.630"
+    api_level: 26
+
+# === 本地可用版本列表 ===
+# /sfs/harmony/sdk-versions/ 下已有的目录:
+# 6.1.0.760, 26.0.0.160, 26.0.0.170, 26.0.0.180, 26.0.0.310, 26.0.0.320,
+# 26.0.0.330, 26.0.0.340, 26.0.0.350, 26.0.0.360, 26.0.0.370, 26.0.0.380,
+# 26.0.0.385, 26.0.0.390, 26.0.0.510, 26.0.0.520SP1, 26.0.0.630, 26.0.0.640,
+# 26.0.0.710, 26.0.0.720, 26.0.0.730, 26.0.0.740, 26.0.0.750
+
+# === fallback 策略 ===
+# 如果 SDK_VERSION 不在映射表中:
+#   1. 如果 commandline_tools_version 存在且在本地有对应目录, 使用该目录
+#   2. 如果 commandline_tools_version 不存在, 从 SDK_VERSION 提取版本号信息,
+#      在本地版本列表中找最接近的版本
+#   3. 如果都找不到, 使用 fallback_sdk_dir 作为最后 fallback
+fallback_sdk_dir: "6.1.0.760"

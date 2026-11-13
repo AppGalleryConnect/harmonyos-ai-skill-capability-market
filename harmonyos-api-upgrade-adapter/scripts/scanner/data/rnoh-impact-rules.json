@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 2,
+  "description": "RNOH 工程影响规则：framework 为 RNOH 框架层（原生 HAR、RNOH JS、宿主承载代码）的只读依据，只用于确认当前版本是否把该变更传到 RN 页面；business 为 RN 业务 JS 的触发写法，只有框架依据成立或无法核对时才输出为 CSV 行。无 business 的规则属于框架整体影响，只进入报告摘要。规则按官方条目标题与平台版本绑定，仅用于定位候选位置，结论由评估确定。",
+  "rules": [
+    {
+      "id": "transition-disappearing-node",
+      "binding": {
+        "platformVersion": "5.0.1",
+        "title": "禁止在转场动画过程中，更新消失节点的属性。"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "NODE_OPACITY_TRANSITION / NODE_TRANSLATE_TRANSITION / transition()",
+          "pattern": "NODE_OPACITY_TRANSITION|NODE_TRANSLATE_TRANSITION|\\.transition\\("
+        }
+      ],
+      "business": [
+        {
+          "api": "Modal animationType / Image fadeDuration",
+          "pattern": "animationType\\s*=\\s*\\{?\\s*[\"'](?:fade|slide)[\"']|\\bfadeDuration\\b"
+        }
+      ]
+    },
+    {
+      "id": "animation-background-finish",
+      "binding": {
+        "platformVersion": "5.0.1",
+        "title": "属性动画onFinish结束回调在UIAbility退后台时因有限循环动画被终止而提前触发"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "animateTo / OH_ArkUI_AnimateOption",
+          "pattern": "OH_ArkUI_AnimateOption_Create|\\banimateTo\\("
+        }
+      ]
+    },
+    {
+      "id": "image-border-radius-dynamic",
+      "binding": {
+        "platformVersion": "5.0.2",
+        "title": "Image组件的borderRadius接口支持动态修改"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "NODE_BORDER_RADIUS",
+          "pattern": "NODE_BORDER_RADIUS\\b"
+        }
+      ]
+    },
+    {
+      "id": "zindex-3d-perspective",
+      "binding": {
+        "platformVersion": "5.0.2",
+        "title": "修复zIndex接口会影响组件在3D变换中的透视效果的错误行为"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "NODE_Z_INDEX",
+          "pattern": "NODE_Z_INDEX\\b"
+        }
+      ],
+      "business": [
+        {
+          "api": "transform rotateX / rotateY / perspective",
+          "pattern": "\\b(?:rotateX|rotateY|perspective)\\b\\s*:"
+        }
+      ]
+    },
+    {
+      "id": "display-orientation-tablet",
+      "binding": {
+        "platformVersion": "5.0.2",
+        "title": "屏幕Display对象rotation和orientation属性变更"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "display.Orientation / namedOrientationDidChange",
+          "pattern": "namedOrientationDidChange|display\\.Orientation\\."
+        }
+      ],
+      "business": [
+        {
+          "api": "namedOrientationDidChange",
+          "pattern": "namedOrientationDidChange"
+        }
+      ]
+    },
+    {
+      "id": "window-layout-fullscreen-pc",
+      "binding": {
+        "platformVersion": "5.0.2",
+        "title": "setWindowLayoutFullScreen、setImmersiveModeEnabledState接口在PC/2in1设备的自由多窗模式上禁用"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "setWindowLayoutFullScreen",
+          "pattern": "setWindowLayoutFullScreen\\("
+        },
+        {
+          "layer": "host",
+          "api": "RNAbility / onWindowSetup",
+          "pattern": "extends\\s+RNAbility\\b|\\bonWindowSetup\\s*\\("
+        }
+      ]
+    },
+    {
+      "id": "sigaction-reset-hand",
+      "binding": {
+        "platformVersion": "5.0.3",
+        "title": "信号处理方法注册接口sigaction支持SA\\_RESETHAND标志位变更"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "SA_RESETHAND",
+          "pattern": "\\bSA_RESETHAND\\b|\\bSA_ONESHOT\\b"
+        }
+      ]
+    },
+    {
+      "id": "status-bar-landscape",
+      "binding": {
+        "platformVersion": "5.1.0",
+        "title": "setSpecificSystemBarEnabled接口在横屏的行为变更"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "setSpecificSystemBarEnabled",
+          "pattern": "setSpecificSystemBarEnabled\\("
+        },
+        {
+          "layer": "rnohJs",
+          "api": "StatusBar setHidden",
+          "pattern": "NativeStatusBarManagerHarmony\\.setHidden\\("
+        }
+      ],
+      "business": [
+        {
+          "api": "StatusBar hidden / StatusBar.setHidden",
+          "pattern": "<StatusBar\\b|StatusBar\\.setHidden\\("
+        }
+      ]
+    },
+    {
+      "id": "scroll-back-to-top-default",
+      "binding": {
+        "platformVersion": "5.1.0",
+        "title": "滚动组件通用接口backToTop属性默认值变更"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "Scroll 节点创建 / NODE_SCROLL_BACK_TO_TOP",
+          "pattern": "ArkUI_NodeType::ARKUI_NODE_SCROLL\\b|NODE_SCROLL_BACK_TO_TOP\\b|\\bScroll\\(this\\.scroller\\)"
+        }
+      ],
+      "business": [
+        {
+          "api": "ScrollView / FlatList / SectionList / scrollsToTop",
+          "pattern": "<(?:ScrollView|FlatList|SectionList|VirtualizedList)\\b|\\bscrollsToTop\\b"
+        }
+      ]
+    },
+    {
+      "id": "page-exit-about-to-disappear",
+      "binding": {
+        "platformVersion": "5.1.0",
+        "title": "页面退出场景自定义组件删除前移"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "RNSurface aboutToDisappear 停止并卸载 Surface",
+          "pattern": "surfaceHandle\\.stop\\(\\)|\\.detachRootView\\("
+        },
+        {
+          "layer": "host",
+          "api": "RNSurface / RNApp 页面承载",
+          "pattern": "\\bRNSurface\\s*\\(|\\bRNApp\\s*\\("
+        }
+      ]
+    },
+    {
+      "id": "jsvm-jit-default-off",
+      "binding": {
+        "platformVersion": "5.1.0",
+        "title": "JIT功能默认关闭，需申请权限证书并通过审核后启用"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "OH_JSVM_Init",
+          "pattern": "\\bOH_JSVM_Init\\("
+        }
+      ]
+    },
+    {
+      "id": "ui-input-ndk-behavior",
+      "binding": {
+        "platformVersion": "6.0.0",
+        "title": "UI Input相关NDK接口行为变更"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "UIInputEvent 来源 / 类型",
+          "pattern": "UI_INPUT_EVENT_SOURCE_TYPE_(?:KEY|TOUCH_SCREEN|MOUSE)\\b|OH_ArkUI_UIInputEvent_Get(?:Type|Action|SourceType|ToolType)\\("
+        }
+      ]
+    },
+    {
+      "id": "icu-line-break",
+      "binding": {
+        "platformVersion": "6.1.0",
+        "title": "全球化接口与运行时接口本地化显示优化及换行能力增强"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "文本排版换行（StyledString / WordBreak）",
+          "pattern": "OH_Drawing_SetTypographyTextWordBreakType\\(|NODE_TEXT_CONTENT_WITH_STYLED_STRING\\b"
+        }
+      ]
+    },
+    {
+      "id": "styled-string-placeholder-paragraph",
+      "binding": {
+        "platformVersion": "26.0.0",
+        "title": "属性字符串段落首个占位为CustomSpan或ImageAttachment时，支持设置段落样式"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "OH_ArkUI_StyledString_AddPlaceholder",
+          "pattern": "OH_ArkUI_StyledString_AddPlaceholder\\("
+        }
+      ]
+    },
+    {
+      "id": "shadow-blur-radius-zero",
+      "binding": {
+        "platformVersion": "26.0.0",
+        "title": "组件的阴影模糊半径规格变更"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "NODE_CUSTOM_SHADOW",
+          "pattern": "NODE_CUSTOM_SHADOW\\b"
+        }
+      ],
+      "business": [
+        {
+          "api": "shadowRadius: 0",
+          "pattern": "\\bshadowRadius\\s*:\\s*0(?![\\d.])"
+        }
+      ]
+    },
+    {
+      "id": "dialog-immersive-material",
+      "binding": {
+        "platformVersion": "26.0.0",
+        "title": "Dialog、Toast、AlphabetIndexer和文本选择菜单默认开启沉浸式系统材质"
+      },
+      "changeType": "UX Visual Layout Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "showAlertDialog / 文本选择菜单",
+          "pattern": "\\bshowAlertDialog\\(|NODE_TEXT_(?:INPUT|AREA)_SELECTION_MENU_HIDDEN\\b|NODE_TEXT_COPY_OPTION\\b"
+        }
+      ],
+      "business": [
+        {
+          "api": "Alert.alert / selectable",
+          "pattern": "\\bAlert\\.alert\\(|\\bselectable\\b"
+        }
+      ]
+    },
+    {
+      "id": "builtin-text-style",
+      "binding": {
+        "platformVersion": "26.0.0",
+        "title": "内置文本的组件文本样式优化"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "showAlertDialog / TextInput / TextArea 节点",
+          "pattern": "\\bshowAlertDialog\\(|ArkUI_NodeType::ARKUI_NODE_TEXT_(?:INPUT|AREA)\\b"
+        }
+      ],
+      "business": [
+        {
+          "api": "Alert.alert / TextInput",
+          "pattern": "\\bAlert\\.alert\\(|<TextInput\\b"
+        }
+      ]
+    },
+    {
+      "id": "image-auto-resize-default",
+      "binding": {
+        "platformVersion": "26.0.0",
+        "title": "Image组件autoResize属性默认行为变更"
+      },
+      "changeType": "API Behavior Change",
+      "framework": [
+        {
+          "layer": "native",
+          "api": "NODE_IMAGE_AUTO_RESIZE",
+          "pattern": "NODE_IMAGE_AUTO_RESIZE\\b"
+        }
+      ],
+      "business": [
+        {
+          "api": "Image resizeMethod",
+          "pattern": "\\bresizeMethod\\b"
+        }
+      ]
+    }
+  ]
+}

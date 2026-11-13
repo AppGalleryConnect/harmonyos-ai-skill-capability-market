@@ -1,0 +1,5 @@
+Api Definition,Language,Changed in SDK,Affected Versions,Title,Code Location,Fixed,Change Type,Rule ID,Change Operation,Source Reference
+declare class CommonMethod<T>,ArkTS,7.0.0(26) Beta1,ALL,ArkUI接口新增仅支持Stage模型的约束,entry/src/main/ets/pages/Index.ets:243,Unfixed,API Definition Change,CH2026010615012,API_DEFINITION,26.0.0/beta1-changes-for-all-apps.md:966
+declare const Button: ButtonInterface,ArkTS,7.0.0(26) Beta1,26.0.0(26) - 26.0.0(26),表单类组件触摸热区最小高度变更,entry/src/main/ets/pages/Index.ets:294,Unfixed,UX Visual Layout Change,CH2026031846233,UX_VISUAL,26.0.0/beta1-ux-style-and-effect-changes.md:36
+declare function showToast(options: ShowToastOptions): void,ArkTS,7.0.0(26) Beta1,26.0.0(26) - 26.0.0(26),Dialog、Toast、AlphabetIndexer和文本选择菜单默认开启沉浸式系统材质,entry/src/main/ets/pages/Index.ets:125,Unfixed,UX Visual Layout Change,CH2026032761266,UX_VISUAL,26.0.0/beta1-ux-style-and-effect-changes.md:146
+declare function showToast(options: ShowToastOptions): void,ArkTS,7.0.0(26) Beta1,26.0.0(26) - 26.0.0(26),内置文本的组件文本样式优化,entry/src/main/ets/pages/Index.ets:125,Unfixed,UX Visual Layout Change,CH2026032801249,UX_VISUAL,26.0.0/beta1-ux-style-and-effect-changes.md:87

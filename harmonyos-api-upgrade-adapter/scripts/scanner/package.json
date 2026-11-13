@@ -1,0 +1,16 @@
+{
+  "name": "@local/harmonyos-api-scanner",
+  "version": "8.2.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "harmony-api-scan": "./bin/harmony-api-scan.mjs"
+  },
+  "scripts": {
+    "test": "node --test",
+    "inspect-rules": "node ./bin/harmony-api-scan.mjs inspect-rules"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
